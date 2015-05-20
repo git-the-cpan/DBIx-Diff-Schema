@@ -30,7 +30,7 @@ resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=DBIx-Diff-Schema
   homepage: https://metacpan.org/release/DBIx-Diff-Schema
   repository: git://github.com/perlancar/perl-DBIx-Diff-Schema.git
-version: '0.05'
+version: '0.06'
 x_Dist_Zilla:
   perl:
     version: '5.018004'
@@ -110,6 +110,10 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::PodnameFromFilename
       name: '@Author::PERLANCAR/PodnameFromFilename'
+      version: '0.01'
+    -
+      class: Dist::Zilla::Plugin::PERLANCAR::CheckDepDists
+      name: '@Author::PERLANCAR/PERLANCAR::CheckDepDists'
       version: '0.01'
     -
       class: Dist::Zilla::Plugin::PERLANCAR::MetaResources
@@ -289,7 +293,7 @@ x_Dist_Zilla:
             - ':ExecFiles'
           skips: []
       name: '@Author::PERLANCAR/Test::Compile'
-      version: '2.051'
+      version: '2.052'
     -
       class: Dist::Zilla::Plugin::Test::Rinci
       name: '@Author::PERLANCAR/Test::Rinci'

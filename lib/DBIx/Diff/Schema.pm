@@ -1,7 +1,7 @@
 package DBIx::Diff::Schema;
 
-our $DATE = '2015-04-24'; # DATE
-our $VERSION = '0.05'; # VERSION
+our $DATE = '2015-05-20'; # DATE
+our $VERSION = '0.06'; # VERSION
 
 use 5.010001;
 use strict;
@@ -78,6 +78,7 @@ sub _list_tables {
     my $sth = $dbh->table_info(undef, undef, undef, undef);
     while (my $row = $sth->fetchrow_hashref) {
         next if $row->{TABLE_TYPE} eq 'VIEW';
+        next if $row->{TABLE_TYPE} eq 'INDEX';
         next if $row->{TABLE_SCHEM} =~ /^(information_schema)$/;
 
         if ($driver eq 'Pg') {
@@ -352,7 +353,7 @@ DBIx::Diff::Schema - Compare schema of two DBI databases
 
 =head1 VERSION
 
-This document describes version 0.05 of DBIx::Diff::Schema (from Perl distribution DBIx-Diff-Schema), released on 2015-04-24.
+This document describes version 0.06 of DBIx::Diff::Schema (from Perl distribution DBIx-Diff-Schema), released on 2015-05-20.
 
 =head1 SYNOPSIS
 
