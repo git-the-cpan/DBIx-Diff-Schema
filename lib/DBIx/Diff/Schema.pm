@@ -1,7 +1,7 @@
 package DBIx::Diff::Schema;
 
-our $DATE = '2015-05-20'; # DATE
-our $VERSION = '0.06'; # VERSION
+our $DATE = '2015-09-03'; # DATE
+our $VERSION = '0.07'; # VERSION
 
 use 5.010001;
 use strict;
@@ -353,7 +353,7 @@ DBIx::Diff::Schema - Compare schema of two DBI databases
 
 =head1 VERSION
 
-This document describes version 0.06 of DBIx::Diff::Schema (from Perl distribution DBIx-Diff-Schema), released on 2015-05-20.
+This document describes version 0.07 of DBIx::Diff::Schema (from Perl distribution DBIx-Diff-Schema), released on 2015-09-03.
 
 =head1 SYNOPSIS
 
